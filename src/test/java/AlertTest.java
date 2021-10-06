@@ -23,17 +23,19 @@ public class AlertTest extends  TestBase {
 
     @Test
     public void alerTestButton3Cancel(){
-
+        app.alert().clickButtonCancel();
     }
 
 
     @Test
     public void alerTestButton3OK(){
+        app.alert().clickAlertButtonOK();
 
     }
 
     @Test
     public void alerTestButton4SendText(){
+        app.alert().clickAlertButtonText();
 
     }
 }

@@ -37,5 +37,22 @@ public class HelperAlert extends HelperBase {
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         alert.accept();
     }
+
+    public void clickButtonCancel() {
+        click(By.id("confirmButton"));
+        wd.switchTo().alert().dismiss();
+
+
+    }
+
+    public void clickAlertButtonOK() {
+        click(By.id("confirmButton"));
+        wd.switchTo().alert().accept();
+    }
+
+    public void clickAlertButtonText() {
+        click(By.id("promtButton"));
+        wd.switchTo().alert().sendKeys("Anna");
+    }
 }
 
