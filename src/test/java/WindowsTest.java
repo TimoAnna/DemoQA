@@ -18,6 +18,8 @@ public class WindowsTest extends TestBase{
 
     @Test
     public void newWindowTest(){
+        app.windows().clickOnNewWindowButton();
+
 
     }
 

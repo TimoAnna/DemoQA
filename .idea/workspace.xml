@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ddf46d6-4b32-48bb-8c2e-7cffa186f4ca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/applications/HelperAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applications/HelperAlert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AlertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AlertTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applications/HelperWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applications/HelperWindows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WindowsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WindowsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -197,6 +199,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
