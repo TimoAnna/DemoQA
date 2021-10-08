@@ -22,7 +22,7 @@ public class StudentRegistrationFormTest extends TestBase {
                 .setEmail("annna123@gmail.com")
                 .setGender("Female")
                 .setPhone("2583691470")
-                .setBirthday("13 01 1992")
+                .setBirthday("13 1 1992")
                 .setSubject("English")
                 .setHobbies("Moto")
                 .setAddress("Rehovot")

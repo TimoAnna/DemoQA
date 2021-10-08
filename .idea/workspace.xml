@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ddf46d6-4b32-48bb-8c2e-7cffa186f4ca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applications/HelperStudentForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applications/HelperStudentForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/applications/HelperWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applications/HelperWindows.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WindowsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WindowsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StudentRegistrationFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentRegistrationFormTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,28 +62,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AlertTest.alerTestButton4SendText">
-    <configuration name="AlertTest.alerTestButton1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;AlertTest.alerTestButton1&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.StudentRegistrationFormTest.studetRegFormTest">
     <configuration name="AlertTest.alerTestButton2Wait" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -168,13 +147,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="StudentRegistrationFormTest.studetRegFormTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;StudentRegistrationFormTest.studetRegFormTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.StudentRegistrationFormTest.studetRegFormTest" />
         <item itemvalue="Gradle.AlertTest.alerTestButton4SendText" />
         <item itemvalue="Gradle.AlertTest.alerTestButton3OK" />
         <item itemvalue="Gradle.AlertTest.alerTestButton3Cancel" />
         <item itemvalue="Gradle.AlertTest.alerTestButton2Wait" />
-        <item itemvalue="Gradle.AlertTest.alerTestButton1" />
       </list>
     </recent_temporary>
   </component>

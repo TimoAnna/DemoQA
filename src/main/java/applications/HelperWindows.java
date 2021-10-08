@@ -29,13 +29,14 @@ public class HelperWindows extends applications.HelperBase {
         String mainWindow = wd.getWindowHandle();
         click(By.id("windowButton"));
 
-        Set<String> wndws = wd.getWindowHandles();
-        for (String handler : wndws){
-            if (!handler.equals(mainWindow)) {
-                wd.switchTo(handler);
-                break;
-            }
-        }
+        List<String> wndws = new ArrayList<>(wd.getWindowHandles());
+        wd.switchTo().window(wndws.get(1));
+        pause(500);
+        wd.switchTo().window(wndws.get(0));
+        pause(300);
     }
 }
+
+
+
 
