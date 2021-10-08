@@ -42,35 +42,33 @@ public class HelperStudentForm extends applications.HelperBase {
         addSunjectByEnter(model.getSubject());
         selectHobbies(model.getHobbies());
         type(By.id("currentAddress"), model.getAddress());
-           typeState(model.getState());
-      //  selectState(model.getState());
+        typeState(model.getState());
+        typeCity(model.getCity());
+
 
     }
 
-    private void selectState(String state) {
-        scroll(0, 300);
-        WebDriverWait wait = new WebDriverWait(wd, 0);
-
-        wait.until(ExpectedConditions.elementToBeClickable
-                (wd.findElement(By.xpath("//div[contains(@class,'css-1hwfws3')]"))));
-
-        wait.until(ExpectedConditions.elementToBeClickable
-                        (wd.findElement(By.xpath("//div[contains(@class,'css-1hwfws3')]")))).click();
-
-
-
-//        type(By.id("react-select-3-input"), state);
-//        wd.findElement(By.id("eact-select-3-input")).sendKeys(Keys.ENTER);
-//        pause(3000);
-
+    private void typeCity(String city) {
+        wd.findElement(By.xpath("//div[contains(@class,'css-1hwfws3')]")).click();
+        WebElement x = wd.findElement(By.id("react-select-4-input"));
+        x.sendKeys(city);
+        x.sendKeys(Keys.ENTER);
+        pause(1000);
     }
 
 
     private void typeState(String state) {
         scroll(0, 300);
-        type(By.id("react-select-3-input"), state);
-        wd.findElement(By.id("eact-select-3-input")).sendKeys(Keys.ENTER);
-        pause(3000);
+       wd.findElement(By.xpath("//div[contains(text(),'Select State')]")).click();
+       WebElement x  = wd.findElement(By.id("react-select-3-input"));
+        x.sendKeys(state);
+        x.sendKeys(Keys.ENTER);
+        pause(2000);
+
+
+
+        pause(2000);
+
     }
 
 
@@ -104,10 +102,10 @@ public class HelperStudentForm extends applications.HelperBase {
         String[] data = birthday.split(" ");
         click(locator);
         new Select(wd.findElement(By.cssSelector(".react-datepicker__year-select"))).selectByValue(data[2]);
-        pause(3000);
+        pause(1000);
         new Select(wd.findElement(By.cssSelector(".react-datepicker__month-select")))
                 .selectByIndex(Integer.parseInt(data[1]) - 1);
-        pause(3000);
+        pause(1000);
 
         int day = Integer.parseInt(data[0]);
         //  wd.findElement(By.xpath("//div[text()= '13']")).click();
@@ -122,7 +120,7 @@ public class HelperStudentForm extends applications.HelperBase {
             el = list.get(0);
         }
         el.click();
-        pause(3000);
+        pause(2000);
 
     }
 

@@ -30,7 +30,7 @@ public class StudentRegistrationFormTest extends TestBase {
                 .setCity("Gurgaon");
 
         app.forms().fillForm(model);
-    //    app.forms().submit();
+       app.forms().submit();
     }
 
 
