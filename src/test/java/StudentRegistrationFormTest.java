@@ -24,13 +24,13 @@ public class StudentRegistrationFormTest extends TestBase {
                 .setPhone("2583691470")
                 .setBirthday("13 1 1992")
                 .setSubject("English")
-                .setHobbies("Moto")
+                .setHobbies("Music")
                 .setAddress("Rehovot")
                 .setState("NCR")
                 .setCity("Gurgaon");
 
         app.forms().fillForm(model);
-        app.forms().submit();
+    //    app.forms().submit();
     }
 
 

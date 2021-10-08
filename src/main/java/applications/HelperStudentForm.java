@@ -5,7 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Pause;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 
 public class HelperStudentForm extends applications.HelperBase {
@@ -32,48 +37,110 @@ public class HelperStudentForm extends applications.HelperBase {
         type(By.id("userEmail"), model.getEmail());
         selectGender(model.getGender());
         type(By.id("userNumber"), model.getPhone());
-     //   typeBDay(By.id("dateOfBirthInput"), model.getBirthday());
+        //   typeBDay(By.id("dateOfBirthInput"), model.getBirthday());
         typeBDayWithCalendar(By.id("dateOfBirthInput"), model.getBirthday());
+        addSunjectByEnter(model.getSubject());
+        selectHobbies(model.getHobbies());
+        type(By.id("currentAddress"), model.getAddress());
+           typeState(model.getState());
+      //  selectState(model.getState());
 
     }
+
+    private void selectState(String state) {
+        scroll(0, 300);
+        WebDriverWait wait = new WebDriverWait(wd, 0);
+
+        wait.until(ExpectedConditions.elementToBeClickable
+                (wd.findElement(By.xpath("//div[contains(@class,'css-1hwfws3')]"))));
+
+        wait.until(ExpectedConditions.elementToBeClickable
+                        (wd.findElement(By.xpath("//div[contains(@class,'css-1hwfws3')]")))).click();
+
+
+
+//        type(By.id("react-select-3-input"), state);
+//        wd.findElement(By.id("eact-select-3-input")).sendKeys(Keys.ENTER);
+//        pause(3000);
+
+    }
+
+
+    private void typeState(String state) {
+        scroll(0, 300);
+        type(By.id("react-select-3-input"), state);
+        wd.findElement(By.id("eact-select-3-input")).sendKeys(Keys.ENTER);
+        pause(3000);
+    }
+
+
+    private void selectHobbies(String hobby) {
+        String[] hobbies = hobby.split(" ");
+        for (String s : hobbies) {
+            switch (s) {
+                case "Sports":
+                    click(By.cssSelector("label[for='hobbies-checkbox-1']"));
+                    break;
+                case "Reading":
+                    click(By.cssSelector("label[for='hobbies-checkbox-1']"));
+                    break;
+                case "Music":
+                    click(By.cssSelector("label[for='hobbies-checkbox-3']"));
+                    break;
+            }
+        }
+    }
+
+
+    private void addSunjectByEnter(String subject) {
+        type(By.id("subjectsInput"), subject);
+        wd.findElement(By.id("subjectsInput")).sendKeys(Keys.ENTER);
+
+    }
+
 
     private void typeBDayWithCalendar(By locator, String birthday) {
         //13 01 1992
-        String [] data = birthday.split(" ");
+        String[] data = birthday.split(" ");
         click(locator);
         new Select(wd.findElement(By.cssSelector(".react-datepicker__year-select"))).selectByValue(data[2]);
-        pause(5000);
-        new Select(wd.findElement(By.cssSelector(".react-datepicker__month-select")))
-                .selectByIndex(Integer.parseInt(data[1])-1);
         pause(3000);
-        wd.findElement(By.xpath("//div[text()= '13']")).click();
-        pause(5000);
+        new Select(wd.findElement(By.cssSelector(".react-datepicker__month-select")))
+                .selectByIndex(Integer.parseInt(data[1]) - 1);
+        pause(3000);
 
-
-
-
+        int day = Integer.parseInt(data[0]);
+        //  wd.findElement(By.xpath("//div[text()= '13']")).click();
+        String loc = String.format("//div[text()= '%s']", day);
+        //  click(By.xpath(loc));
+        List<WebElement> list = wd.findElements(By.xpath(loc));
+        WebElement el;
+        //если есть повторы да в календаре то делаем проверку
+        if (list.size() > 1 && day > 15) {
+            el = list.get(1);
+        } else {
+            el = list.get(0);
+        }
+        el.click();
+        pause(3000);
 
     }
-
 
 
     private void typeBDay(By locator, String birthday) {
-       WebElement element =  wd.findElement(locator);
-       element.click();
-       String os = System.getProperty("os.name");
-       System.out.println(os);
-      if(os.startsWith("Mac")){
-          element.sendKeys(Keys.chord(Keys.COMMAND + "a"));
-      }else {
-          element.sendKeys(Keys.chord(Keys.LEFT_CONTROL + "a"));
-      }
-       element.sendKeys(birthday);
-       pause(700);
+        WebElement element = wd.findElement(locator);
+        element.click();
+        String os = System.getProperty("os.name");
+        System.out.println(os);
+        if (os.startsWith("Mac")) {
+            element.sendKeys(Keys.chord(Keys.COMMAND + "a"));
+        } else {
+            element.sendKeys(Keys.chord(Keys.LEFT_CONTROL + "a"));
+        }
+        element.sendKeys(birthday);
+        pause(700);
 
     }
-
-
-
 
 
     private void selectGender(String gender) {
